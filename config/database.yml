@@ -1,15 +1,17 @@
 default: &default
   adapter: mysql2
-  encoding: utf8
+  encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#  timeout: 5000
   username: root
-  host: 127.0.0.1
+  host: localhost
+  password:
+  port: 3306
 
 development:
   <<: *default
   database: share_kkc_development
-  password:
+  username: kkc-member
+  password: 1234_Passw0rd
 
 test:
   <<: *default

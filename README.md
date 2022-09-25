@@ -8,14 +8,14 @@
 - 起動コマンド
   rails s
 - ログイン画面
-  http://localhost:3000//users/sign_in
+  http://localhost:3000/users/sign_in
 ```
 * System dependencies
 
 * Configuration
 
-* Database creation
-mysql8.0 
+* Database creation 
+#### mysql8.0
 ```
 mysql.server stop
 mysql.server restart

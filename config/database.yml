@@ -10,8 +10,9 @@ default: &default
 development:
   <<: *default
   database: share_kkc_development
-  username: kkc-member
-  password: 1234_Passw0rd
+  host: <%= ENV.fetch("DEV_DATABASE_HOST") { 'share-kkc-db' } %>
+  username: <%= ENV.fetch("DEV_DATABASE_USER_NAME") { 'kkc-member' } %>
+  password: <%= ENV.fetch("DEV_DATABASE_PASSWORD") { '1234_Passw0rd' } %>
 
 test:
   <<: *default
